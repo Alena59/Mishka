@@ -1,0 +1,12 @@
+@import "../variables.scss";
+
+.size-form__innder {
+  display: flex;
+  column-gap: 7px;
+  margin-bottom: 31px;
+}
+
+.size-form__checkbox {
+  min-width: 82px;
+  border: 2px solid $color-tundora-two;
+}

@@ -1,0 +1,12 @@
+@import "../mixins.scss";
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  @include open-sans(18px, 24px);
+  font-family: "Open Sans", "Arial", sans-serif;
+  min-height: 100%;
+  margin: 0;
+}

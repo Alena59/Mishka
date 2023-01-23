@@ -1,0 +1,38 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.main-nav {
+  position: relative;
+}
+
+.main-nav__list {
+  @include open-sans-bold(17px, 24px);
+  list-style-type: none;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  background-color: $color-white;
+  width: 100%;
+}
+
+.main-nav__link {
+  position: relative;
+  text-decoration: none;
+  color: $color-black;
+}
+
+.main-nav__item {
+  padding: 28px 40px 26px 76px;
+  border-bottom: 1px solid $color-gallery;
+}
+
+.main-nav__item--reset-border {
+  border-bottom: none;
+}
+
+.main-nav__link-icon {
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-9px);
+}

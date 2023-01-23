@@ -1,0 +1,65 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.best-product {
+  position: relative;
+}
+
+.best-product__inner {
+  padding: 31px 30px 36px;
+}
+
+.best-product__inner::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  height: 6px;
+  background: url("../img/zigzag-line.png") repeat;
+}
+
+.best-product__title {
+  @include open-sans-bold(25px, 30px);
+  margin-bottom: 3px;
+}
+
+.best-product__subtitle {
+  @include open-sans-bold(17px, 20px);
+  color: $color-downy;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+}
+
+.best-product__description {
+  @include open-sans(15px, 24px);
+  margin-bottom: 28px;
+}
+
+.best-product__list-box {
+  display: grid;
+  grid-template-columns: 105px auto;
+  padding: 10px 0 10px;
+  border-bottom: solid 1px $color-gallery;
+}
+
+.best-product__list {
+  margin-bottom: 27px;
+}
+
+.best-product__value {
+  margin: 0;
+}
+
+.best-product__image {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.best-product__text {
+  @include open-sans-bold(17px, 24px);
+  text-align: center;
+  margin-bottom: 24px;
+}

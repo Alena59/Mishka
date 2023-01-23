@@ -1,0 +1,75 @@
+@import "../mixins.scss";
+
+.about-us__inner {
+  padding: 31px 30px 71px;
+}
+
+.about-us__title {
+  @include open-sans-bold(25px, 30px);
+  margin-bottom: 28px;
+}
+
+.about-us__list {
+  @include open-sans-bold(17px, 20px);
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.about-us__item {
+  padding-top: 54px;
+  position: relative;
+  flex-basis: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.about-us__item--flower-icon,
+.about-us__item--money-icon,
+.about-us__item--heart-icon,
+.about-us__item--ball-icon,
+.about-us__item--rocket-icon,
+.about-us__item--gift-icon {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 40px;
+    background-repeat: no-repeat;
+    // background-position: center;
+  }
+}
+
+.about-us__item--flower-icon::before {
+  background-image: url("../img/icons-about-us/flower.svg");
+  background-size: 33px 38px;
+}
+
+.about-us__item--money-icon::before {
+  background-image: url("../img/icons-about-us/money.svg");
+  background-size: 47px 27px;
+}
+
+.about-us__item--heart-icon::before {
+  background-image: url("../img/icons-about-us/heart.svg");
+  background-size: 34px 27px;
+}
+
+.about-us__item--ball-icon::before {
+  background-image: url("../img/icons-about-us/ball.svg");
+  background-size: 35px 34px;
+}
+
+.about-us__item--rocket-icon::before {
+  background-image: url("../img/icons-about-us/rocket.svg");
+  background-size: 55px 23px;
+}
+
+.about-us__item--gift-icon::before {
+  background-image: url("../img/icons-about-us/gift.svg");
+  background-size: 33px 32px;
+}

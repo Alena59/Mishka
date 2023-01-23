@@ -1,0 +1,17 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.main-footer__wrapper {
+  padding: 25px 30px 31px;
+}
+
+.main-footer__link {
+  @include open-sans-bold(19px, 18px);
+  text-decoration: none;
+  color: $color-black;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 27px;
+}

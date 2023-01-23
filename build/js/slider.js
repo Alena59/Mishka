@@ -1,0 +1,1 @@
+var quotesSwiper=new Swiper(".swiper",{direction:"horizontal",loop:!0,autoplay:{delay:3e3},navigation:{nextEl:".reviews__button--next",prevEl:".reviews__button--prev"}});quotesSwiper.init();

@@ -1,0 +1,75 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.reviews__wrapper {
+  position: relative;
+  padding: 0 30px 45px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    height: 6px;
+    background: url("../img/zigzag-line.png") repeat;
+  }
+}
+
+.reviews__title {
+  @include open-sans-bold(25px, 30px);
+  margin-bottom: 14px;
+}
+
+.reviews__item {
+  @include open-sans(15px, 30px);
+  color: $color-tundora;
+}
+
+.reviews__toggle {
+  position: relative;
+  border: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 54px;
+}
+
+.reviews__button {
+  position: relative;
+  min-height: 52px;
+  padding: 13px 42px 13px 38px;
+  display: flex;
+  justify-content: center;
+  background: $color-white;
+  border: 1px solid $color-gallery;
+  cursor: pointer;
+}
+
+.reviews__arrow {
+  position: absolute;
+}
+
+.reviews__arrow--right {
+  transform: rotate(180deg);
+}
+
+.reviews__info {
+  margin: 0;
+  margin-bottom: 33px;
+}
+
+.reviews__author {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews__author-name {
+  @include open-sans-bold(17px, 30px);
+  color: $color-black;
+}
+
+.reviews__author-contact {
+  @include open-sans(17px, 24px);
+}

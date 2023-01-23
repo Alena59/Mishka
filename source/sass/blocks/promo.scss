@@ -1,0 +1,59 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.promo__wrapper {
+  padding: 73px 30px 120px;
+  background: url("../img/hero-mobile1.jpg") no-repeat;
+  background-position: center -16px;
+  background-size: 568px 373px;
+}
+
+.promo__title {
+  @include open-sans-bold(27px, 30px);
+  text-align: center;
+}
+
+.promo__thing {
+  @include open-sans-bold(19px, 24px);
+  position: relative;
+  display: block;
+  min-height: 103px;
+  padding: 24px 130px 31px 30px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-size: contain;
+  }
+}
+
+.promo__link {
+  color: $color-white;
+  text-decoration: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.promo__thing--toys {
+  background-color: $color-fountain-blue;
+
+  &::before {
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/interior-decor/toy.svg");
+    background-size: contain;
+    right: 27px;
+  }
+}
+
+.promo__thing--interior {
+  background-color: $color-downy;
+
+  &::before {
+    width: 40px;
+    height: 62px;
+    background-image: url("../img/interior-decor/lamp.svg");
+    right: 36px;
+  }
+}

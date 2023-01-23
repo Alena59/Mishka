@@ -1,0 +1,16 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.checkbox__label {
+  cursor: pointer;
+}
+
+.checkbox__label--size {
+  @include open-sans-bold(17px, 16px);
+  color: $color-tundora;
+  display: block;
+  width: 100%;
+  padding: 18px 10px;
+  text-align: center;
+  text-transform: uppercase;
+}

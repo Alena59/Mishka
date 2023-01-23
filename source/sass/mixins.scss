@@ -1,0 +1,13 @@
+@mixin open-sans($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: 400;
+  margin: 0;
+}
+
+@mixin open-sans-bold($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: 700;
+  margin: 0;
+}
