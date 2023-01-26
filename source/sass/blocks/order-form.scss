@@ -1,0 +1,51 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.order-form__fields {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  row-gap: 20px;
+}
+
+.order-form__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 33px;
+}
+
+.order-form__title {
+  @include open-sans-bold(17px, 16px);
+  margin-bottom: 30px;
+  color: $color-downy-two;
+  position: relative;
+  text-transform: uppercase;
+  width: 100%;
+
+  &::after {
+    top: 50%;
+    left: 70px;
+    position: absolute;
+    content: "";
+    width: calc(100% - 70px);
+    height: 1px;
+    background-color: $color-downy;
+  }
+}
+
+.order-form__fields-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-form__fields--type {
+  row-gap: 11px;
+}
+
+.order-form__fields--gap {
+  row-gap: 23px;
+}
+

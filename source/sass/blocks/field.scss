@@ -1,0 +1,33 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.field__input {
+  @include open-sans(17px, 18px);
+  padding: 17px 10px 17px 0;
+  border: none;
+  border-bottom: 2px solid $color-tundora;
+
+  &::placeholder {
+    color: $color-black-two;
+  }
+}
+
+.field__label {
+  @include open-sans-bold(17px, 18px);
+}
+
+.field__label--green {
+  color: $color-downy-two;
+  text-transform: uppercase;
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+
+  &::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    margin-left: 20px;
+    background-color: $color-downy;
+  }
+}

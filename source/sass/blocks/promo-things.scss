@@ -1,0 +1,11 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.promo-things__wrapper {
+  padding: 73px 30px;
+  background-color: $color-seashell;
+}
+
+.promo-things__title {
+  @include open-sans-bold(27px, 30px);
+}

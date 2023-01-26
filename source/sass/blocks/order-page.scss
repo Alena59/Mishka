@@ -1,0 +1,12 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.order-page__inner {
+  padding: 17px 30px 55px;
+}
+
+.order-page__description {
+  @include open-sans(13px, 24px);
+  margin-bottom: 29px;
+  color: $color-tundora;
+}
