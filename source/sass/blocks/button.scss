@@ -1,8 +1,5 @@
-@import "../mixins.scss";
-@import "../variables.scss";
-
 .button {
-  @include open-sans-bold(18px, 20px);
+  @include open-sans-bold(17px, 20px);
   display: block;
   text-decoration: none;
   text-transform: uppercase;
@@ -10,4 +7,5 @@
   text-align: center;
   color: $color-tundora;
   border: 2px solid $color-tundora;
+  background-color: $color-white;
 }

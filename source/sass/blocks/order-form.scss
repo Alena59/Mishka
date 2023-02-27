@@ -49,3 +49,30 @@
   row-gap: 23px;
 }
 
+.order-form__textarea {
+  @include open-sans(17px, 18px);
+  height: 142px;
+  width: 100%;
+  padding: 17px;
+  border: 2px solid $color-tundora;
+
+  &::placeholder {
+    color: $color-black-two;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.order-form__note {
+  @include open-sans(14px, 16px);
+  color: $color-tundora;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.order-form__fieldset--additionally {
+  margin-bottom: 17px;
+}
+

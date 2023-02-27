@@ -1,35 +1,38 @@
-@import "../variables.scss";
-@import "../mixins.scss";
-
 .best-product {
   position: relative;
 }
 
-.best-product__inner {
+.best-product__wrapper {
   padding: 31px 30px 36px;
 }
 
-.best-product__inner::after {
+.best-product__wrapper::after {
   position: absolute;
   content: "";
   left: 0;
   bottom: 0;
   width: 100%;
-  display: block;
   height: 6px;
-  background: url("../img/zigzag-line.png") repeat;
-}
-
-.best-product__title {
-  @include open-sans-bold(25px, 30px);
-  margin-bottom: 3px;
+  background: url("../img/icons/stack.svg#zigzag-line") repeat;
+  background-size: 16px 6px;
 }
 
 .best-product__subtitle {
+  @include open-sans-bold(25px, 30px);
+  margin-bottom: 3px;
+  order: -1;
+}
+
+.best-product__title {
   @include open-sans-bold(17px, 20px);
   color: $color-downy;
   text-transform: uppercase;
+}
+
+.best-product__inner {
   margin-bottom: 17px;
+  display: flex;
+  flex-direction: column;
 }
 
 .best-product__description {
@@ -38,6 +41,7 @@
 }
 
 .best-product__list-box {
+  @include open-sans(15px, 20px);
   display: grid;
   grid-template-columns: 105px auto;
   padding: 10px 0 10px;
@@ -58,8 +62,75 @@
   margin-bottom: 25px;
 }
 
-.best-product__text {
+.best-product__price {
   @include open-sans-bold(17px, 24px);
   text-align: center;
   margin-bottom: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .best-product__wrapper {
+    padding: 51px 50px 69px;
+    display: grid;
+    grid-template-columns: 1fr 334хч;
+    grid-template-rows: max-content max-content max-content;
+    column-gap: 42px;
+  }
+
+  .best-product__subtitle {
+    @include open-sans-bold(43px, 50px);
+  }
+
+  .best-product__inner {
+    flex-direction: row;
+    margin-bottom: 37px;
+    justify-content: space-between;
+    align-items: center;
+    grid-row: 1/2;
+    grid-column: 1/3;
+  }
+
+  .best-product__title {
+    @include open-sans-bold(17px, 17px);
+    max-width: 100px;
+    text-align: center;
+  }
+
+  .best-product__inner-characteristics {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  .best-product__image {
+    width: 334px;
+    height: 404px;
+    margin: 0;
+
+  }
+
+  .best-product__inner-image {
+    grid-row: 2/4;
+    grid-column: 2/3;
+  }
+
+  .best-product__inner-price {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    margin-top: auto;
+  }
+
+  .best-product__wrapper::after {
+    height: 17px;
+    background-size: 39px 17px;
+  }
+
+  .best-product__description {
+    @include open-sans(17px, 30px);
+    margin-bottom: 48px;
+  }
+
+  .best-product__price {
+    @include open-sans-bold(20px, 24px);
+    margin-bottom: 33px;
+  }
 }

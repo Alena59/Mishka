@@ -4,12 +4,13 @@ import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
+import { stacksvg } from "gulp-stacksvg";
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
-import svgstore from 'gulp-svgstore';
+
 import del from 'del';
 import browser from 'browser-sync';
 
@@ -63,14 +64,11 @@ const svg = () =>
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 
-const sprite = () => {
+export function createStack () {
   return gulp.src('source/img/icons/*.svg')
     .pipe(svgo())
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img'));
+    .pipe(stacksvg())
+    .pipe(gulp.dest('build/img/icons'));
 }
 
 const copy = (done) => {
@@ -120,7 +118,7 @@ export const build = gulp.series(
   html,
   scripts,
   svg,
-  sprite,
+  createStack,
   // createWebp
   ),
 );
@@ -134,7 +132,7 @@ export default gulp.series(
   html,
   scripts,
   svg,
-  sprite,
+  createStack,
   // createWebp
   ),
   gulp.series(

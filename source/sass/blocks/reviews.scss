@@ -13,7 +13,8 @@
     width: 100%;
     display: block;
     height: 6px;
-    background: url("../img/zigzag-line.png") repeat;
+    background: url("../img/icons/stack.svg#zigzag-line") repeat;
+    background-size: 16px 6px;
   }
 }
 
@@ -22,9 +23,17 @@
   margin-bottom: 14px;
 }
 
-.reviews__item {
+.reviews__list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.reviews__text {
   @include open-sans(15px, 30px);
   color: $color-tundora;
+  text-align: left;
+  width: 100%;
+  margin: 0;
 }
 
 .reviews__toggle {
@@ -38,8 +47,9 @@
 .reviews__button {
   position: relative;
   min-height: 52px;
-  padding: 13px 42px 13px 38px;
+  padding: 0;
   display: flex;
+  align-items: center;
   justify-content: center;
   background: $color-white;
   border: 1px solid $color-gallery;
@@ -60,16 +70,70 @@
 }
 
 .reviews__author {
+  @include open-sans(17px, 30px);
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
 }
 
 .reviews__author-name {
-  @include open-sans-bold(17px, 30px);
   color: $color-black;
+  margin-bottom: 4px;
 }
 
 .reviews__author-contact {
   @include open-sans(17px, 24px);
+}
+
+@media (min-width: $tablet-width) {
+  .reviews__wrapper {
+    padding: 82px 50px 130px;
+    background: url("../img/review.jpg") no-repeat left top;
+    background-size: 350px 457px;
+
+    &::before {
+      height: 17px;
+      background: url("../img/icons/stack.svg#zigzag-line") repeat;
+      background-size: 39px 17px;
+    }
+  }
+
+  .review__link {
+    padding: 16px 40px;
+    position: absolute;
+    top: 82px;
+    right: 50px;
+    z-index: 10;
+  }
+
+  .reviews__text {
+    @include open-sans(17px, 30px);
+    color: $color-tundora;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+  }
+
+  .reviews__title {
+    @include open-sans-bold(43px, 50px);
+    margin-bottom: 38px;
+  }
+
+  .reviews__toggle {
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    z-index: 1;
+    display: flex;
+  }
+
+  .reviews__button {
+    min-width: 88px;
+    min-height: 52px;
+    border: none;
+  }
+
+  .reviews__author {
+    @include open-sans(18px, 24px);
+  }
 }

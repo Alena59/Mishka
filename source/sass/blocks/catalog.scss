@@ -1,0 +1,17 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.catalog__header {
+  padding: 73px 30px;
+  background-color: $color-seashell;
+}
+
+.catalog__title {
+  @include open-sans-bold(27px, 30px);
+}
+
+.catalog__list {
+  list-style-type: none;
+  padding: 30px;
+  margin: 0;
+}

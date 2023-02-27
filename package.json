@@ -4,7 +4,8 @@
   "description": "Личный проект «Мишка» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
-    "autoprefixer": "10.4.0",
+    "autoprefixer": "10.4.13",
+    "gulp-stacksvg": "1.0.6",
     "browser-sync": "^2.27.11",
     "del": "6.0.0",
     "gulp": "4.0.2",
